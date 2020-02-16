@@ -38,8 +38,8 @@ class DoctrineExtension extends AbstractDoctrineExtension
     /** @var string */
     private $defaultConnection;
 
-    /**
-     * {@inheritDoc}
+     /**
+     * Loads a configuration.
      */
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -699,6 +699,9 @@ class DoctrineExtension extends AbstractDoctrineExtension
         return 'doctrine.orm.' . $name;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     protected function getMappingObjectDefaultName() : string
     {
         return 'Entity';
